@@ -30,12 +30,12 @@ def write_c_var(var, var_name, dtype, filename, append):
     
     # figure out the declaration
     decl = dtype + " " + var_name
-    if var.size > 1:
+    if var.size >= 1:
         for lng in var.shape:
-            if lng > 1:
+            if lng >= 1:
                 decl = decl + "[" + str(lng) + "]";            
     decl = decl + " = "
-    if var.size > 1:
+    if var.size >= 1:
         decl = decl + "{\n"
     
     # write the declaration
@@ -45,7 +45,7 @@ def write_c_var(var, var_name, dtype, filename, append):
     var.tofile(fid, sep=",", format="%s")
 
     # write end of declaration and close file
-    if var.size > 1:
+    if var.size >= 1:
         fid.write("};\n\n")
     else:
         fid.write(";\n\n")

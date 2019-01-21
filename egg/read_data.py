@@ -29,6 +29,7 @@ def read_data(design_file, out_file, pu, min_vals=None, max_vals=None):
 
     # read and standardize the design
     design = np.loadtxt(design_file, skiprows=1, delimiter=",")
+    design = design.reshape(design.shape[0], -1)
     m, p = design.shape
     if min_vals is None:
         x_min = design.min(0)
@@ -43,6 +44,7 @@ def read_data(design_file, out_file, pu, min_vals=None, max_vals=None):
 
     # read the output
     ysim = np.loadtxt(out_file, skiprows=1, delimiter=",")
+    ysim = ysim.reshape(ysim.shape[0], -1)
     ysim = np.transpose(ysim)
 
     # standardize the output
