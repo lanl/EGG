@@ -50,7 +50,6 @@ project_keywords = ["emulation"]
 
 # a list of required packages to run project
 install_requires = [
-    "matplotlib>=2.0.0",
 ]
 
 # a list of all executables to be installed
