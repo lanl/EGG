@@ -112,3 +112,9 @@ The input file called ``design.txt`` has a column for each input parameter to th
 For a given row in the input file, the output of the simulation has the same row index in the output file called ``output.txt``.
 For example, the parameters from the ``i``-th row in the input file were used to generate the simulation output in the ``i``-th of the output file.
 
+## Visualization
+
+We have developed a visualization tool for emulators hatched by the EGG. It is part of the Cinema ecosystem (https://cinemascience.github.io/). It can be found at 
+
+https://github.com/cinemascience/cinema_emui
+
